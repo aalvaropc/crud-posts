@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+Detalle
+
+<br>
+Titulo: {{post.title}}
+<br>
+Contenido: {{post.content}}
+<br>
+
+<a href="{% url 'blog:home' %}">Regresar</a>
+
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+blog list
+<br>
+{% for post in posts %}
+<a href="{% url 'blog:detail' post.id%}">{{post.title}}<a/>
+--
+<a href="{% url 'blog:update' post.id%}">Actualizar</a>
+--
+<a href="{% url 'blog:delete' post.id%}">Eliminar</a>
+<br>
+{% endfor %}
+<br>
+<button class="h-10 px-2 rounded-md bg-black text-white" type="submit" >
+    <a href="{% url 'blog:create' %}">Crear</a>
+</button>
+<a href="{% url 'home' %}">Regresar Home</a>
+
+{% endblock content %}

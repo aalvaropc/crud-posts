@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+Estas seguro de eliminar {{post.title}}? 
+
+<form method="POST">
+{% csrf_token %}
+{{form}}
+<button type="submit">Eliminar</button>
+</form>
+
+<a href="{% url 'blog:home' %}">Regresar</a>
+{% endblock content %}
